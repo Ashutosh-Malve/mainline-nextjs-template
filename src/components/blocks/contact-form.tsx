@@ -1,12 +1,13 @@
 "use client";
+
+import { useState } from "react";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Check } from "lucide-react";
 import { motion } from "motion/react";
-import { useAction } from "next-safe-action/hooks";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
-import { serverAction } from "@/actions/server-action";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
@@ -31,6 +32,9 @@ import { formSchema } from "@/lib/form-schema";
 type Schema = z.infer<typeof formSchema>;
 
 export function ContactForm() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
   const form = useForm<Schema>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -42,21 +46,17 @@ export function ContactForm() {
       agree: false,
     } as unknown as Schema,
   });
-  const formAction = useAction(serverAction, {
-    onSuccess: () => {
-      // TODO: show success message
-      form.reset();
-    },
-    onError: () => {
-      // TODO: show error message
-    },
-  });
-  const handleSubmit = form.handleSubmit(async (data: Schema) => {
-    formAction.execute(data);
+  
+  const handleSubmit = form.handleSubmit(async () => {
+    setIsSubmitting(true);
+    // Simulate form submission (for static export, form won't actually submit)
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    form.reset();
   });
 
-  const { isExecuting, hasSucceeded } = formAction;
-  if (hasSucceeded) {
+  if (isSubmitted) {
     return (
       <div className="w-full gap-2 rounded-md border p-2 sm:p-5 md:p-8">
         <motion.div
@@ -241,8 +241,8 @@ export function ContactForm() {
           )}
         />
         <div className="flex w-full items-center justify-end pt-3">
-          <Button className="rounded-lg" size="sm">
-            {isExecuting ? "Submitting..." : "Submit"}
+          <Button className="rounded-lg" size="sm" type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Submitting..." : "Submit"}
           </Button>
         </div>
       </form>

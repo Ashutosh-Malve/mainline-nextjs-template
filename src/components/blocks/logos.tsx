@@ -16,70 +16,70 @@ type Company = {
 export const Logos = () => {
   const topRowCompanies = [
     {
-      name: "Mercury",
-      logo: "/logos/mercury.svg",
+      name: "Cloudflare",
+      logo: "/logos/cloudflare.svg",
       width: 143,
       height: 26,
-      href: "https://mercury.com",
+      href: "https://cloudflare.com",
     },
     {
-      name: "Watershed",
-      logo: "/logos/watershed.svg",
+      name: "Vercel",
+      logo: "/logos/vercel.svg",
       width: 154,
       height: 31,
-      href: "https://watershed.com",
+      href: "https://vercel.com",
     },
     {
-      name: "Retool",
-      logo: "/logos/retool.svg",
+      name: "Supabase",
+      logo: "/logos/supabase.svg",
       width: 113,
       height: 22,
-      href: "https://retool.com",
+      href: "https://supabase.com",
     },
     {
-      name: "Descript",
-      logo: "/logos/descript.svg",
+      name: "LangChain",
+      logo: "/logos/langchain.svg",
       width: 112,
       height: 27,
-      href: "https://descript.com",
+      href: "https://langchain.com",
     },
   ];
 
   const bottomRowCompanies = [
     {
-      name: "Perplexity",
-      logo: "/logos/perplexity.svg",
+      name: "OpenAI",
+      logo: "/logos/openai.svg",
       width: 141,
       height: 32,
+      href: "https://openai.com",
+    },
+    {
+      name: "Perplexity",
+      logo: "/logos/perplexity.svg",
+      width: 104,
+      height: 18,
       href: "https://perplexity.com",
     },
     {
-      name: "Monzo",
-      logo: "/logos/monzo.svg",
-      width: 104,
-      height: 18,
-      href: "https://monzo.com",
-    },
-    {
-      name: "Ramp",
-      logo: "/logos/ramp.svg",
+      name: "Vercel",
+      logo: "/logos/vercel.svg",
       width: 105,
       height: 28,
-      href: "https://ramp.com",
+      href: "https://vercel.com",
     },
     {
-      name: "Raycast",
-      logo: "/logos/raycast.svg",
+      name: "Cloudflare",
+      logo: "/logos/cloudflare.svg",
       width: 128,
       height: 33,
-      href: "https://raycast.com",
+      href: "https://cloudflare.com",
     },
     {
-      name: "Arc",
-      logo: "/logos/arc.svg",
+      name: "Supabase",
+      logo: "/logos/supabase.svg",
       width: 90,
       height: 28,
-      href: "https://arc.com",
+      href: "https://supabase.com",
     },
   ];
 
@@ -88,11 +88,7 @@ export const Logos = () => {
       <div className="container space-y-10 lg:space-y-16">
         <div className="text-center">
           <h2 className="mb-4 text-xl text-balance md:text-2xl lg:text-3xl">
-            Powering the world's best product teams.
-            <br className="max-md:hidden" />
-            <span className="text-muted-foreground">
-              From next-gen startups to established enterprises.
-            </span>
+            Powering the next generation of global startups, indie builders, and product teams.
           </h2>
         </div>
 

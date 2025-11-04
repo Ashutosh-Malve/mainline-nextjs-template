@@ -63,29 +63,28 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Mainline - Modern Next.js Template",
-    template: "%s | Mainline",
+    default: "EdgeBase - Fully managed backend on the edge",
+    template: "%s | EdgeBase",
   },
   description:
-    "A modern Next.js template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
+    "Firebase for the Edge — Fully Managed Backend on Cloudflare. Real-time data, auth, storage, and functions — built entirely on Cloudflare's edge network. Zero servers. Zero DevOps. Zero vendor lock-in.",
   keywords: [
-    "Next.js",
-    "nextjs template",
-    "nextjs theme",
-    "nextjs starter",
-    "shadcn template",
-    "shadcn theme",
-    "shadcn starter",
-    "tailwind template",
-    "tailwind theme",
-    "tailwind starter",
-    "mdx template",
-    "mdx theme",
-    "mdx starter",
+    "EdgeBase",
+    "edge computing",
+    "Cloudflare",
+    "backend as a service",
+    "Firebase alternative",
+    "edge functions",
+    "serverless",
+    "real-time database",
+    "edge auth",
+    "edge storage",
+    "BaaS",
+    "edge backend",
   ],
-  authors: [{ name: "shadcnblocks.com" }],
-  creator: "shadcnblocks.com",
-  publisher: "shadcnblocks.com",
+  authors: [{ name: "EdgeBase" }],
+  creator: "EdgeBase",
+  publisher: "EdgeBase",
   robots: {
     index: true,
     follow: true,
@@ -102,26 +101,26 @@ export const metadata: Metadata = {
     shortcut: [{ url: "/favicon/favicon.ico" }],
   },
   openGraph: {
-    title: "Mainline - Modern Next.js Template",
+    title: "EdgeBase - Fully managed backend on the edge",
     description:
-      "A modern Next.js template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
-    siteName: "Mainline",
+      "Firebase for the Edge — Fully Managed Backend on Cloudflare. Real-time data, auth, storage, and functions — built entirely on Cloudflare's edge network.",
+    siteName: "EdgeBase",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Mainline - Modern Next.js Template",
+        alt: "EdgeBase - Fully managed backend on the edge",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mainline - Modern Next.js Template",
+    title: "EdgeBase - Fully managed backend on the edge",
     description:
-      "A modern Next.js template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
+      "Firebase for the Edge — Fully Managed Backend on Cloudflare. Build fast. Scale globally. Pay less.",
     images: ["/og-image.jpg"],
-    creator: "@ausrobdev",
+    creator: "@edgebase",
   },
 };
 

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { FcGoogle } from "react-icons/fc";
@@ -17,13 +16,9 @@ const Login = () => {
           <div className="flex flex-col gap-4">
             <Card className="mx-auto w-full max-w-sm">
               <CardHeader className="flex flex-col items-center space-y-0">
-                <Image
-                  src="/logo.svg"
-                  alt="logo"
-                  width={94}
-                  height={18}
-                  className="mb-7 dark:invert"
-                />
+                <span className="text-foreground mb-7 text-2xl font-bold tracking-tight">
+                  EdgeBase
+                </span>
                 <p className="mb-2 text-2xl font-bold">Welcome back</p>
                 <p className="text-muted-foreground">
                   Please enter your details.
@@ -57,7 +52,7 @@ const Login = () => {
                     </a>
                   </div>
                   <Button type="submit" className="mt-2 w-full">
-                    Create an account
+                    Sign in
                   </Button>
                   <Button variant="outline" className="w-full">
                     <FcGoogle className="mr-2 size-5" />

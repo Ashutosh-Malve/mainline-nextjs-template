@@ -6,13 +6,13 @@ import { cn } from "@/lib/utils";
 
 const topItems = [
   {
-    title: "Reusable issue templates.",
+    title: "Firebase gave us simplicity.",
     description:
-      "Draft lightning-fast documents with our Smart Instructions and Templates.",
+      "Cloudflare gave us the edge. EdgeBase gives you both — without the cost or lock-in.",
     images: [
       {
         src: "/resource-allocation/templates.webp",
-        alt: "Issue template interface",
+        alt: "EdgeBase value proposition",
         width: 495,
         height: 186,
       },
@@ -22,37 +22,37 @@ const topItems = [
     fade: [""],
   },
   {
-    title: "Simplify your stack.",
-    description: "No more Confluence, SharePoint, or Microsoft Word.",
+    title: "Built for:",
+    description: "Indie builders and SaaS founders, teams scaling beyond Firebase, AI + realtime apps needing low-latency sync.",
     images: [
-      { src: "/logos/jira.svg", alt: "Jira logo", width: 48, height: 48 },
-      { src: "/logos/excel.svg", alt: "Excel logo", width: 48, height: 48 },
+      { src: "/logos/jira.svg", alt: "Builder logo", width: 48, height: 48 },
+      { src: "/logos/excel.svg", alt: "SaaS logo", width: 48, height: 48 },
       {
         src: "/logos/notion.svg",
-        alt: "Notion logo",
+        alt: "Startup logo",
         width: 48,
         height: 48,
       },
-      { src: "/logos/word.svg", alt: "Word logo", width: 48, height: 48 },
+      { src: "/logos/word.svg", alt: "AI logo", width: 48, height: 48 },
       {
         src: "/logos/monday.svg",
-        alt: "Monday logo",
+        alt: "Product logo",
         width: 48,
         height: 48,
       },
       {
         src: "/logos/drive.svg",
-        alt: "Google Drive logo",
+        alt: "Team logo",
         width: 48,
         height: 48,
       },
       {
         src: "/logos/jira.svg",
-        alt: "Jira logo",
+        alt: "Developer logo",
         width: 48,
         height: 48,
       },
-      { src: "/logos/asana.svg", alt: "Asana logo", width: 48, height: 48 },
+      { src: "/logos/asana.svg", alt: "Founder logo", width: 48, height: 48 },
     ],
     className:
       "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 md:[&>.title-container]:translate-x-2 xl:[&>.title-container]:translate-x-4 [&>.title-container]:translate-x-0",
@@ -62,13 +62,13 @@ const topItems = [
 
 const bottomItems = [
   {
-    title: "Graveyard it.",
+    title: "Indie builders and SaaS founders.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.",
+      "Build fast. Scale globally. Pay less.",
     images: [
       {
         src: "/resource-allocation/graveyard.webp",
-        alt: "Graveyard interface",
+        alt: "Indie builders",
         width: 305,
         height: 280,
       },
@@ -78,13 +78,13 @@ const bottomItems = [
     fade: ["bottom"],
   },
   {
-    title: "Task discussions.",
+    title: "Teams scaling beyond Firebase.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+      "Own your data, your logic, your scale.",
     images: [
       {
         src: "/resource-allocation/discussions.webp",
-        alt: "Task discussions interface",
+        alt: "Scaling teams",
         width: 320,
         height: 103,
       },
@@ -94,13 +94,13 @@ const bottomItems = [
     fade: [""],
   },
   {
-    title: "Notifications.",
+    title: "AI + realtime apps needing low-latency sync.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+      "Sub-200ms latency worldwide with instant sync across continents.",
     images: [
       {
         src: "/resource-allocation/notifications.webp",
-        alt: "Notifications interface",
+        alt: "AI realtime apps",
         width: 305,
         height: 280,
       },
@@ -119,7 +119,7 @@ export const ResourceAllocation = () => {
     >
       <div className="">
         <h2 className="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-          Mainline your resource allocation and execution
+          Why EdgeBase
         </h2>
 
         <div className="mt-8 md:mt-12 lg:mt-20">

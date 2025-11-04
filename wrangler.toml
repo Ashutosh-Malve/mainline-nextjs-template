@@ -1,0 +1,9 @@
+name = "edgebase"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+[[r2_buckets]]
+binding = "ASSETS"
+bucket_name = "edgebase-assets"
+preview_bucket_name = "edgebase-assets-preview"
+

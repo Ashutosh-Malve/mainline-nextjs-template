@@ -13,23 +13,23 @@ import { Button } from "@/components/ui/button";
 
 const features = [
   {
-    title: "Tailored workflows",
-    description: "Track progress across custom issue flows for your team.",
+    title: "Edge Performance",
+    description: "Sub-200ms latency worldwide with automatic scaling and zero cold starts.",
     icon: CircleDot,
   },
   {
-    title: "Cross-team projects",
-    description: "Collaborate across teams and departments.",
+    title: "Fully Managed",
+    description: "We handle provisioning, scaling, caching, and replication automatically.",
     icon: Blend,
   },
   {
-    title: "Milestones",
-    description: "Break projects down into concrete phases.",
+    title: "Real-Time Data",
+    description: "Instant sync for users across continents with Firestore-style API.",
     icon: Diamond,
   },
   {
-    title: "Progress insights",
-    description: "Track scope, velocity, and progress over time.",
+    title: "Zero Egress Cost",
+    description: "Upload, serve, and stream globally with zero egress fees.",
     icon: ChartNoAxesColumn,
   },
 ];
@@ -40,19 +40,23 @@ export const Hero = () => {
       <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         {/* Left side - Main content */}
         <div className="flex-1">
-          <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-nowrap">
-            Mainline Next.js template
+          <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl">
+            EdgeBase —<br className="hidden lg:block" />
+            Fully Managed Backend
           </h1>
 
           <p className="text-muted-foreground text-1xl mt-5 md:text-3xl">
-            Mainline is an open-source website template built with shadcn/ui,
-            Tailwind 4 & Next.js
+            Real-time data, auth, storage, and functions — built entirely on Cloudflare's edge network.
+            <br />
+            <span className="text-lg md:text-xl lg:text-2xl">
+              Zero servers. Zero DevOps. Zero vendor lock-in.
+            </span>
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
             <Button asChild>
-              <a href="https://github.com/shadcnblocks/mainline-nextjs-template">
-                Get template
+              <a href="/signup">
+                🚀 Get Started Free
               </a>
             </Button>
             <Button
@@ -61,10 +65,10 @@ export const Hero = () => {
               asChild
             >
               <a
-                href="https://shadcnblocks.com"
+                href="https://github.com"
                 className="max-w-56 truncate text-start md:max-w-none"
               >
-                Built by shadcnblocks.com
+                💻 View on GitHub
                 <ArrowRight className="stroke-3" />
               </a>
             </Button>
@@ -104,7 +108,7 @@ export const Hero = () => {
         <div className="relative h-[793px] w-full">
           <Image
             src="/hero.webp"
-            alt="hero"
+            alt="EdgeBase - Fully managed backend on the edge"
             fill
             className="rounded-2xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none"
           />

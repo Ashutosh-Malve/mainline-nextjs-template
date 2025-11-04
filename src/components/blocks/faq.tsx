@@ -10,52 +10,22 @@ import { cn } from "@/lib/utils";
 
 const categories = [
   {
-    title: "Support",
+    title: "About EdgeBase",
     questions: [
       {
-        question: "How do I update my account without breaking my laptop?",
+        question: "Is EdgeBase just Firebase on Cloudflare?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "No — it's a full backend platform built natively for the edge. You own the data, we manage the runtime.",
       },
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: "Do I need to manage servers?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Nope. It's 100% serverless — we deploy your data, logic, and storage across Cloudflare's global edge network.",
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: "Can I self-host?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
-      },
-    ],
-  },
-  {
-    title: "Your account",
-    questions: [
-      {
-        question: "Is support free, or do I need to Google everything?",
-        answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
-      },
-      {
-        question: "Are you going to be subsumed by AI?",
-        answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
-      },
-    ],
-  },
-  {
-    title: "Other questions",
-    questions: [
-      {
-        question: "Is support free, or do I need to Google everything?",
-        answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
-      },
-      {
-        question: "Are you going to be subsumed by AI?",
-        answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Yes — EdgeBase is open-core. Run your own or use our managed edge.",
       },
     ],
   },

@@ -25,19 +25,19 @@ const contactInfo = [
         <div>
           <p className="">Careers</p>
           <Link
-            href="mailto:careers@example.com"
+            href="mailto:careers@edgebase.com"
             className="text-muted-foreground hover:text-foreground"
           >
-            careers@example.com
+            careers@edgebase.com
           </Link>
         </div>
         <div className="mt-1">
           <p className="">Press</p>
           <Link
-            href="mailto:press@example.com"
+            href="mailto:press@edgebase.com"
             className="text-muted-foreground hover:text-foreground"
           >
-            press@example.com
+            press@edgebase.com
           </Link>
         </div>
       </div>

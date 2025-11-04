@@ -1,12 +1,9 @@
 "use client";
 
-import { useState } from "react";
-
 import { Check } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Switch } from "@/components/ui/switch";
 import { cn } from "@/lib/utils";
 
 const plans = [
@@ -14,43 +11,41 @@ const plans = [
     name: "Free",
     monthlyPrice: "$0",
     yearlyPrice: "$0",
-    description: "Free for everyone",
+    description: "Up to 100K requests/day, 1GB storage, 1 project",
     features: [
-      "Unlimited members",
-      "2 teams",
-      "500 issues",
-      "Slack and Github integrations",
+      "Unlimited users",
+      "Global edge replication",
+      "Zero egress cost",
+      "1 project",
     ],
   },
   {
-    name: "Startup",
-    monthlyPrice: "$8",
-    yearlyPrice: "$6",
+    name: "Pro",
+    monthlyPrice: "$9",
+    yearlyPrice: "$9",
     features: [
       "All free plan features and...",
-      "Mainline AI",
-      "Unlimited teams",
-      "Unlimited issues and file uploads",
-      "Mainline Insights",
-      "Admin roles",
+      "Unlimited projects",
+      "Higher limits",
+      "Triggers & realtime",
+      "Priority support",
     ],
   },
   {
-    name: "Enterprise",
-    monthlyPrice: "$8",
-    yearlyPrice: "$6",
+    name: "Scale",
+    monthlyPrice: "Custom",
+    yearlyPrice: "Custom",
     features: [
-      "All free plan features and...",
-      "Mainline AI",
-      "Supermainline AGI",
-      "Free daily catered lunch",
-      "random HIPPA audits",
+      "All Pro plan features and...",
+      "SLAs",
+      "Private regions",
+      "Dedicated support",
+      "Custom integrations",
     ],
   },
 ];
 
 export const Pricing = ({ className }: { className?: string }) => {
-  const [isAnnual, setIsAnnual] = useState(true);
 
   return (
     <section className={cn("py-28 lg:py-32", className)}>
@@ -60,9 +55,7 @@ export const Pricing = ({ className }: { className?: string }) => {
             Pricing
           </h2>
           <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
-            Use Mainline for free with your whole team. Upgrade to enable
-            unlimited issues, enhanced security controls, and additional
-            features.
+            Start free, scale as you grow. All plans include unlimited users, global edge replication, and zero egress cost.
           </p>
         </div>
 
@@ -81,29 +74,24 @@ export const Pricing = ({ className }: { className?: string }) => {
                   <h3 className="text-foreground font-semibold">{plan.name}</h3>
                   <div className="space-y-1">
                     <div className="text-muted-foreground text-lg font-medium">
-                      {isAnnual ? plan.yearlyPrice : plan.monthlyPrice}{" "}
-                      {plan.name !== "Free" && (
+                      {plan.monthlyPrice}{" "}
+                      {plan.name !== "Free" && plan.name !== "Scale" && (
                         <span className="text-muted-foreground">
-                          per user/
-                          {isAnnual ? "year" : "month"}
+                          /month
                         </span>
                       )}
                     </div>
                   </div>
                 </div>
 
-                {plan.name !== "Free" ? (
-                  <div className="flex items-center gap-2">
-                    <Switch
-                      checked={isAnnual}
-                      onCheckedChange={() => setIsAnnual(!isAnnual)}
-                      aria-label="Toggle annual billing"
-                    />
-                    <span className="text-sm font-medium">Billed annually</span>
-                  </div>
-                ) : (
+                {plan.name === "Free" && (
                   <span className="text-muted-foreground text-sm">
                     {plan.description}
+                  </span>
+                )}
+                {plan.name === "Scale" && (
+                  <span className="text-muted-foreground text-sm">
+                    Contact us for custom pricing
                   </span>
                 )}
 
@@ -121,13 +109,18 @@ export const Pricing = ({ className }: { className?: string }) => {
 
                 <Button
                   className="w-fit"
-                  variant={plan.name === "Startup" ? "default" : "outline"}
+                  variant={plan.name === "Pro" ? "default" : "outline"}
                 >
-                  Get started
+                  {plan.name === "Free" ? "Get Started Free →" : plan.name === "Scale" ? "Contact Sales" : "Get Started"}
                 </Button>
               </CardContent>
             </Card>
           ))}
+        </div>
+        <div className="mt-12 text-center">
+          <p className="text-muted-foreground text-sm">
+            All plans include: <span className="text-foreground font-medium">Unlimited users</span>, <span className="text-foreground font-medium">Global edge replication</span>, <span className="text-foreground font-medium">Zero egress cost</span>
+          </p>
         </div>
       </div>
     </section>

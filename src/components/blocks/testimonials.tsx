@@ -17,59 +17,59 @@ import { cn } from "@/lib/utils";
 
 const items = [
   {
-    quote: "We're misusing Mainline as a CRM and it still works!",
-    author: "Amy Chase",
-    role: "PM",
-    company: "Mercury Finance",
+    quote: "EdgeBase gave us the edge performance we needed for our global user base.",
+    author: "Alex Chen",
+    role: "CTO",
+    company: "CloudSync",
     image: "/testimonials/amy-chase.webp",
   },
   {
-    quote: "I was able to replace 80% of my team with Mainline bots.",
-    author: "Jonas Kotara",
-    role: "Lead Engineer",
-    company: "Mercury Finance",
+    quote: "Zero egress costs and sub-200ms latency worldwide — exactly what we needed.",
+    author: "Sarah Kim",
+    role: "Founder",
+    company: "RealtimeApp",
     image: "/testimonials/jonas-kotara.webp",
   },
   {
-    quote: "Founder Mode is hard enough without having a really nice PM app.",
-    author: "Kevin Yam",
-    role: "Founder",
-    company: "Mercury Finance",
+    quote: "Building on EdgeBase feels like Firebase, but faster and more flexible.",
+    author: "Mike Rodriguez",
+    role: "Lead Developer",
+    company: "EdgeFirst",
     image: "/testimonials/kevin-yam.webp",
   },
   {
-    quote: "I can use the tool as a substitute from my PM.",
-    author: "Kundo Marta",
-    role: "Founder",
-    company: "Mercury Finance",
+    quote: "Finally, a backend platform that scales globally without the complexity.",
+    author: "Emma Wilson",
+    role: "Engineering Lead",
+    company: "GlobalSaaS",
     image: "/testimonials/kundo-marta.webp",
   },
   {
-    quote: "We're misusing Mainline as a CRM and it still works!",
-    author: "Amy Chase",
-    role: "PM",
-    company: "Mercury Finance",
+    quote: "EdgeBase gave us the edge performance we needed for our global user base.",
+    author: "Alex Chen",
+    role: "CTO",
+    company: "CloudSync",
     image: "/testimonials/amy-chase.webp",
   },
   {
-    quote: "I was able to replace 80% of my team with Mainline bots.",
-    author: "Jonas Kotara",
-    role: "Lead Engineer",
-    company: "Mercury Finance",
+    quote: "Zero egress costs and sub-200ms latency worldwide — exactly what we needed.",
+    author: "Sarah Kim",
+    role: "Founder",
+    company: "RealtimeApp",
     image: "/testimonials/jonas-kotara.webp",
   },
   {
-    quote: "Founder Mode is hard enough without having a really nice PM app.",
-    author: "Kevin Yam",
-    role: "Founder",
-    company: "Mercury Finance",
+    quote: "Building on EdgeBase feels like Firebase, but faster and more flexible.",
+    author: "Mike Rodriguez",
+    role: "Lead Developer",
+    company: "EdgeFirst",
     image: "/testimonials/kevin-yam.webp",
   },
   {
-    quote: "I can use the tool as a substitute from my PM.",
-    author: "Kundo Marta",
-    role: "Founder",
-    company: "Mercury Finance",
+    quote: "Finally, a backend platform that scales globally without the complexity.",
+    author: "Emma Wilson",
+    role: "Engineering Lead",
+    company: "GlobalSaaS",
     image: "/testimonials/kundo-marta.webp",
   },
 ];
@@ -90,7 +90,7 @@ export const Testimonials = ({
               Trusted by product builders
             </h2>
             <p className="text-muted-foreground max-w-md leading-snug">
-              Mainline is built on the habits that make the best product teams
+              EdgeBase is built on the habits that make the best product teams
               successful: staying focused, moving quickly, and always aiming for
               high-quality work.
             </p>

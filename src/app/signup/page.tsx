@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { FcGoogle } from "react-icons/fc";
@@ -16,13 +15,9 @@ const Signup = () => {
           <div className="flex flex-col gap-4">
             <Card className="mx-auto w-full max-w-sm">
               <CardHeader className="flex flex-col items-center space-y-0">
-                <Image
-                  src="/logo.svg"
-                  alt="logo"
-                  width={94}
-                  height={18}
-                  className="mb-7 dark:invert"
-                />
+                <span className="text-foreground mb-7 text-2xl font-bold tracking-tight">
+                  EdgeBase
+                </span>
                 <p className="mb-2 text-2xl font-bold">Start your free trial</p>
                 <p className="text-muted-foreground">
                   Sign up in less than 2 minutes.
