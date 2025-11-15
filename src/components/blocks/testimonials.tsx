@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { ArrowRight } from "lucide-react";
 
 import { DashedLine } from "../dashed-line";
@@ -17,60 +15,52 @@ import { cn } from "@/lib/utils";
 
 const items = [
   {
-    quote: "EdgeBase gave us the edge performance we needed for our global user base.",
-    author: "Alex Chen",
-    role: "CTO",
-    company: "CloudSync",
-    image: "/testimonials/amy-chase.webp",
+    quote: "The future of backend infrastructure is at the edge. EdgeBase is making it accessible to everyone.",
+    author: "Our Vision",
+    role: "For Developers",
+    company: "Global Performance",
   },
   {
-    quote: "Zero egress costs and sub-200ms latency worldwide — exactly what we needed.",
-    author: "Sarah Kim",
-    role: "Founder",
-    company: "RealtimeApp",
-    image: "/testimonials/jonas-kotara.webp",
+    quote: "We believe every developer should have access to enterprise-grade infrastructure without enterprise complexity.",
+    author: "Our Mission",
+    role: "Zero to Global",
+    company: "In Minutes",
   },
   {
-    quote: "Building on EdgeBase feels like Firebase, but faster and more flexible.",
-    author: "Mike Rodriguez",
-    role: "Lead Developer",
-    company: "EdgeFirst",
-    image: "/testimonials/kevin-yam.webp",
+    quote: "Building the platform we wish existed: Firebase's simplicity meets Cloudflare's edge network.",
+    author: "Why We're Building",
+    role: "The Best of",
+    company: "Both Worlds",
   },
   {
-    quote: "Finally, a backend platform that scales globally without the complexity.",
-    author: "Emma Wilson",
-    role: "Engineering Lead",
-    company: "GlobalSaaS",
-    image: "/testimonials/kundo-marta.webp",
+    quote: "Join us in reimagining what backend infrastructure can be when built for the modern web.",
+    author: "Join the Journey",
+    role: "Early Access",
+    company: "Coming Soon",
   },
   {
-    quote: "EdgeBase gave us the edge performance we needed for our global user base.",
-    author: "Alex Chen",
-    role: "CTO",
-    company: "CloudSync",
-    image: "/testimonials/amy-chase.webp",
+    quote: "The future of backend infrastructure is at the edge. EdgeBase is making it accessible to everyone.",
+    author: "Our Vision",
+    role: "For Developers",
+    company: "Global Performance",
   },
   {
-    quote: "Zero egress costs and sub-200ms latency worldwide — exactly what we needed.",
-    author: "Sarah Kim",
-    role: "Founder",
-    company: "RealtimeApp",
-    image: "/testimonials/jonas-kotara.webp",
+    quote: "We believe every developer should have access to enterprise-grade infrastructure without enterprise complexity.",
+    author: "Our Mission",
+    role: "Zero to Global",
+    company: "In Minutes",
   },
   {
-    quote: "Building on EdgeBase feels like Firebase, but faster and more flexible.",
-    author: "Mike Rodriguez",
-    role: "Lead Developer",
-    company: "EdgeFirst",
-    image: "/testimonials/kevin-yam.webp",
+    quote: "Building the platform we wish existed: Firebase's simplicity meets Cloudflare's edge network.",
+    author: "Why We're Building",
+    role: "The Best of",
+    company: "Both Worlds",
   },
   {
-    quote: "Finally, a backend platform that scales globally without the complexity.",
-    author: "Emma Wilson",
-    role: "Engineering Lead",
-    company: "GlobalSaaS",
-    image: "/testimonials/kundo-marta.webp",
+    quote: "Join us in reimagining what backend infrastructure can be when built for the modern web.",
+    author: "Join the Journey",
+    role: "Early Access",
+    company: "Coming Soon",
   },
 ];
 
@@ -87,15 +77,17 @@ export const Testimonials = ({
         <div className="container">
           <div className="space-y-4">
             <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-              Trusted by product builders
+              Built for ambitious builders
             </h2>
             <p className="text-muted-foreground max-w-md leading-snug">
-              EdgeBase is built on the habits that make the best product teams
-              successful: staying focused, moving quickly, and always aiming for
-              high-quality work.
+              EdgeBase is designed for teams who want to build fast, scale globally, and own their infrastructure. 
+              Whether you're an indie builder shipping your first product or a team scaling beyond Firebase, 
+              we're building the platform you need.
             </p>
-            <Button variant="outline" className="shadow-md">
-              Read our Customer Stories <ArrowRight className="size-4" />
+            <Button variant="outline" className="shadow-md" asChild>
+              <a href="/contact">
+                Join the Waitlist <ArrowRight className="size-4" />
+              </a>
             </Button>
           </div>
 
@@ -115,14 +107,6 @@ export const Testimonials = ({
                   >
                     <Card className="bg-muted h-full overflow-hidden border-none">
                       <CardContent className="flex h-full flex-col p-0">
-                        <div className="relative h-[288px] lg:h-[328px]">
-                          <Image
-                            src={testimonial.image}
-                            alt={testimonial.author}
-                            fill
-                            className="object-cover object-top"
-                          />
-                        </div>
                         <div className="flex flex-1 flex-col justify-between gap-10 p-6">
                           <blockquote className="font-display text-lg leading-none! font-medium md:text-xl lg:text-2xl">
                             {testimonial.quote}

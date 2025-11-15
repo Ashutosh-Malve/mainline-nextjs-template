@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import {
   ArrowRight,
   Blend,
@@ -9,6 +7,7 @@ import {
 } from "lucide-react";
 
 import { DashedLine } from "@/components/dashed-line";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 const features = [
@@ -54,11 +53,14 @@ export const Hero = () => {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
-            <Button asChild>
-              <a href="/signup">
-                🚀 Get Started Free
-              </a>
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button asChild>
+                <a href="/signup">
+                  🚀 Sign up to waitlist
+                </a>
+              </Button>
+              <Badge variant="comingSoon">Coming Soon</Badge>
+            </div>
             <Button
               variant="outline"
               className="from-background h-auto gap-2 bg-linear-to-r to-transparent shadow-md"
@@ -101,17 +103,6 @@ export const Hero = () => {
               </div>
             );
           })}
-        </div>
-      </div>
-
-      <div className="mt-12 max-lg:ml-6 max-lg:h-[550px] max-lg:overflow-hidden md:mt-20 lg:container lg:mt-24">
-        <div className="relative h-[793px] w-full">
-          <Image
-            src="/hero.webp"
-            alt="EdgeBase - Fully managed backend on the edge"
-            fill
-            className="rounded-2xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none"
-          />
         </div>
       </div>
     </section>

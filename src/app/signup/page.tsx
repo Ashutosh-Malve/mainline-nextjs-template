@@ -1,8 +1,7 @@
 import Link from "next/link";
 
-import { FcGoogle } from "react-icons/fc";
-
 import { Background } from "@/components/background";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -15,35 +14,28 @@ const Signup = () => {
           <div className="flex flex-col gap-4">
             <Card className="mx-auto w-full max-w-sm">
               <CardHeader className="flex flex-col items-center space-y-0">
-                <span className="text-foreground mb-7 text-2xl font-bold tracking-tight">
-                  EdgeBase
-                </span>
-                <p className="mb-2 text-2xl font-bold">Start your free trial</p>
+                <div className="mb-7 flex items-center gap-2">
+                  <span className="text-foreground text-2xl font-bold tracking-tight">
+                    EdgeBase
+                  </span>
+                  <Badge variant="beta">Beta</Badge>
+                </div>
+                <p className="mb-2 text-2xl font-bold">Join the waitlist</p>
                 <p className="text-muted-foreground">
-                  Sign up in less than 2 minutes.
+                  We're launching soon. Be the first to know when we're ready.
                 </p>
+                <Badge variant="comingSoon" className="mt-3">Coming Soon</Badge>
               </CardHeader>
               <CardContent>
                 <div className="grid gap-4">
                   <Input type="text" placeholder="Enter your name" required />
                   <Input type="email" placeholder="Enter your email" required />
-                  <div>
-                    <Input
-                      type="password"
-                      placeholder="Enter your password"
-                      required
-                    />
-                    <p className="text-muted-foreground mt-1 text-sm">
-                      Must be at least 8 characters.
-                    </p>
-                  </div>
-                  <Button type="submit" className="mt-2 w-full">
-                    Create an account
+                  <Button type="submit" className="mt-2 w-full" disabled>
+                    Join Waitlist
                   </Button>
-                  <Button variant="outline" className="w-full">
-                    <FcGoogle className="mr-2 size-5" />
-                    Sign up with Google
-                  </Button>
+                  <p className="text-muted-foreground text-center text-sm">
+                    We'll notify you as soon as EdgeBase is ready for early access.
+                  </p>
                 </div>
                 <div className="text-muted-foreground mx-auto mt-8 flex justify-center gap-1 text-sm">
                   <p>Already have an account?</p>

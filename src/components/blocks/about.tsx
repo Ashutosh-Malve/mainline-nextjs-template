@@ -1,22 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 const About = () => {
   return (
-    <section className="container mt-10 flex max-w-5xl flex-col-reverse gap-8 md:mt-14 md:gap-14 lg:mt-20 lg:flex-row lg:items-end">
-      {/* Images Left - Text Right */}
+    <section className="container mt-10 flex max-w-5xl flex-col gap-8 md:mt-14 md:gap-14 lg:mt-20 lg:gap-20">
+      {/* Text Content */}
       <div className="flex flex-col gap-8 lg:gap-16 xl:gap-20">
-        <ImageSection
-          images={[
-            { src: "/about/1.webp", alt: "Team collaboration" },
-            { src: "/about/2.webp", alt: "Team workspace" },
-          ]}
-          className="xl:-translate-x-10"
-        />
-
         <TextSection
           title="The team"
           paragraphs={[
@@ -31,7 +21,7 @@ const About = () => {
         />
       </div>
 
-      {/* Text Left - Images Right */}
+      {/* Text Content */}
       <div className="flex flex-col gap-8 lg:gap-16 xl:gap-20">
         <TextSection
           paragraphs={[
@@ -39,44 +29,12 @@ const About = () => {
             "We're committed to open, portable infrastructure. Your data stays yours, your code stays yours, and you can run it anywhere. When you succeed, we succeed.",
           ]}
         />
-        <ImageSection
-          images={[
-            { src: "/about/3.webp", alt: "Modern workspace" },
-            { src: "/about/4.webp", alt: "Team collaboration" },
-          ]}
-          className="hidden lg:flex xl:translate-x-10"
-        />
       </div>
     </section>
   );
 };
 
 export default About;
-
-interface ImageSectionProps {
-  images: { src: string; alt: string }[];
-  className?: string;
-}
-
-export function ImageSection({ images, className }: ImageSectionProps) {
-  return (
-    <div className={cn("flex flex-col gap-6", className)}>
-      {images.map((image, index) => (
-        <div
-          key={index}
-          className="relative aspect-[2/1.5] overflow-hidden rounded-2xl"
-        >
-          <Image
-            src={image.src}
-            alt={image.alt}
-            fill
-            className="object-cover"
-          />
-        </div>
-      ))}
-    </div>
-  );
-}
 
 interface TextSectionProps {
   title?: string;

@@ -2,6 +2,7 @@
 
 import { Check } from "lucide-react";
 
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
@@ -71,7 +72,12 @@ export const Pricing = ({ className }: { className?: string }) => {
             >
               <CardContent className="flex flex-col gap-7 px-6 py-5">
                 <div className="space-y-2">
-                  <h3 className="text-foreground font-semibold">{plan.name}</h3>
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-foreground font-semibold">{plan.name}</h3>
+                    {plan.name !== "Free" && (
+                      <Badge variant="comingSoon" className="text-xs">Coming Soon</Badge>
+                    )}
+                  </div>
                   <div className="space-y-1">
                     <div className="text-muted-foreground text-lg font-medium">
                       {plan.monthlyPrice}{" "}
@@ -111,7 +117,7 @@ export const Pricing = ({ className }: { className?: string }) => {
                   className="w-fit"
                   variant={plan.name === "Pro" ? "default" : "outline"}
                 >
-                  {plan.name === "Free" ? "Get Started Free →" : plan.name === "Scale" ? "Contact Sales" : "Get Started"}
+                  {plan.name === "Free" ? "Sign up to waitlist →" : plan.name === "Scale" ? "Contact Sales" : "Sign up to waitlist"}
                 </Button>
               </CardContent>
             </Card>

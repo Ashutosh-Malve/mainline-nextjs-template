@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 
 
 import { ThemeToggle } from "@/components/theme-toggle";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -18,7 +19,6 @@ import { cn } from "@/lib/utils";
 const ITEMS = [
   { label: "Features", href: "#features" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Docs", href: "#" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
@@ -30,26 +30,27 @@ export const Navbar = () => {
   return (
     <section
       className={cn(
-        "bg-background/70 absolute left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
+        "bg-background/70 absolute left-1/2 z-50 w-[min(95%,700px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300 overflow-hidden",
         "top-5 lg:top-12",
       )}
     >
-      <div className="flex items-center justify-between px-6 py-3">
-        <Link href="/" className="flex shrink-0 items-center gap-2">
-          <span className="text-foreground text-xl font-bold tracking-tight">
+      <div className="flex items-center justify-between gap-2 px-4 py-3 sm:px-6">
+        <Link href="/" className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+          <span className="text-foreground text-lg font-bold tracking-tight sm:text-xl">
             EdgeBase 
           </span>
+          <Badge variant="beta" className="text-xs">Beta</Badge>
         </Link>
 
         {/* Desktop Navigation */}
-        <NavigationMenu className="max-lg:hidden">
-          <NavigationMenuList>
+        <NavigationMenu className="hidden lg:block flex-1 min-w-0">
+          <NavigationMenuList className="justify-center gap-1">
             {ITEMS.map((link) => (
-              <NavigationMenuItem key={link.label} className="">
+              <NavigationMenuItem key={link.label} className="shrink-0">
                 <Link
                   href={link.href}
                   className={cn(
-                    "relative bg-transparent px-1.5 text-sm font-medium transition-opacity hover:opacity-75",
+                    "relative bg-transparent px-1.5 text-xs sm:text-sm font-medium transition-opacity hover:opacity-75 whitespace-nowrap",
                     pathname === link.href && "text-muted-foreground",
                   )}
                 >
@@ -61,23 +62,17 @@ export const Navbar = () => {
         </NavigationMenu>
 
         {/* Auth Buttons */}
-        <div className="flex items-center gap-2.5">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-2.5">
           <ThemeToggle />
-          <Link href="/login" className="max-lg:hidden">
-            <Button variant="outline">
-              <span className="relative z-10">Sign In</span>
+          <Link href="/signup" className="hidden lg:block">
+            <Button className="h-8 px-3 text-xs sm:text-sm">
+              <span className="relative z-10 whitespace-nowrap">Sign up to waitlist</span>
             </Button>
           </Link>
-          <Link href="/signup" className="max-lg:hidden">
-            <Button>
-              <span className="relative z-10">Get Started</span>
-            </Button>
-          </Link>
-    
 
           {/* Hamburger Menu Button (Mobile Only) */}
           <button
-            className="text-muted-foreground relative flex size-8 lg:hidden"
+            className="text-muted-foreground relative flex size-8 shrink-0 lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <span className="sr-only">Open main menu</span>

@@ -4,10 +4,8 @@ import { Button } from "@/components/ui/button";
 
 export function Footer() {
   const navigation = [
-    { name: "Docs", href: "#" },
     { name: "GitHub", href: "https://github.com" },
-    { name: "X (Twitter)", href: "#" },
-    { name: "LinkedIn", href: "#" },
+    { name: "X (Twitter)", href: "https://x.com/malve" },
   ];
 
   const legal = [
@@ -27,7 +25,7 @@ export function Footer() {
         <div>
           <Button size="lg" className="mt-4" asChild>
             <a href="/signup">
-              Get Started Free →
+              Sign up to waitlist →
             </a>
           </Button>
         </div>

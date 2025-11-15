@@ -9,16 +9,9 @@ const topItems = [
     title: "Firebase gave us simplicity.",
     description:
       "Cloudflare gave us the edge. EdgeBase gives you both — without the cost or lock-in.",
-    images: [
-      {
-        src: "/resource-allocation/templates.webp",
-        alt: "EdgeBase value proposition",
-        width: 495,
-        height: 186,
-      },
-    ],
+    images: [],
     className:
-      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8",
     fade: [""],
   },
   {
@@ -65,49 +58,28 @@ const bottomItems = [
     title: "Indie builders and SaaS founders.",
     description:
       "Build fast. Scale globally. Pay less.",
-    images: [
-      {
-        src: "/resource-allocation/graveyard.webp",
-        alt: "Indie builders",
-        width: 305,
-        height: 280,
-      },
-    ],
+    images: [],
     className:
-      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
-    fade: ["bottom"],
+      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8",
+    fade: [],
   },
   {
     title: "Teams scaling beyond Firebase.",
     description:
       "Own your data, your logic, your scale.",
-    images: [
-      {
-        src: "/resource-allocation/discussions.webp",
-        alt: "Scaling teams",
-        width: 320,
-        height: 103,
-      },
-    ],
+    images: [],
     className:
-      "justify-normal [&>.title-container]:mb-5 md:[&>.title-container]:mb-0 [&>.image-container]:flex-1 md:[&>.image-container]:place-items-center md:[&>.image-container]:-translate-y-3",
-    fade: [""],
+      "justify-normal [&>.title-container]:mb-5 md:[&>.title-container]:mb-0",
+    fade: [],
   },
   {
     title: "AI + realtime apps needing low-latency sync.",
     description:
       "Sub-200ms latency worldwide with instant sync across continents.",
-    images: [
-      {
-        src: "/resource-allocation/notifications.webp",
-        alt: "AI realtime apps",
-        width: 305,
-        height: 280,
-      },
-    ],
+    images: [],
     className:
-      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
-    fade: ["bottom"],
+      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8",
+    fade: [],
   },
 ];
 
@@ -180,9 +152,6 @@ const Item = ({ item, isLast, className }: ItemProps) => {
         <span className="text-muted-foreground"> {item.description}</span>
       </div>
 
-      {item.fade.includes("bottom") && (
-        <div className="from-muted/80 absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent md:hidden" />
-      )}
       {item.images.length > 4 ? (
         <div className="relative overflow-hidden">
           <div className="flex flex-col gap-5">
@@ -224,7 +193,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
             </div>
           </div>
         </div>
-      ) : (
+      ) : item.images.length > 0 ? (
         <div className="image-container grid grid-cols-1 gap-4">
           {item.images.map((image, j) => (
             <Image
@@ -237,7 +206,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
             />
           ))}
         </div>
-      )}
+      ) : null}
 
       {!isLast && (
         <>
