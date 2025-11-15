@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     template: "%s | EdgeBase",
   },
   description:
-    "Firebase for the Edge — Fully Managed Backend on Cloudflare. Real-time data, auth, storage, and functions — built entirely on Cloudflare's edge network. Zero servers. Zero DevOps. Zero vendor lock-in.",
+    "Firebase for the Edge — Fully Managed Backend on Cloudflare. Real-time data, auth, storage, and functions — built entirely on Cloudflare's edge network. Zero servers. Zero DevOps.",
   keywords: [
     "EdgeBase",
     "edge computing",

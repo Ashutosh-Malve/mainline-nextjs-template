@@ -1,5 +1,3 @@
-import { DashedLine } from "../dashed-line";
-
 export const Vision = () => {
   return (
     <section className="pb-28 lg:pb-32">

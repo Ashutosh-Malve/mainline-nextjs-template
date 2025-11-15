@@ -48,7 +48,7 @@ export const Hero = () => {
             Real-time data, auth, storage, and functions — built entirely on Cloudflare's edge network.
             <br />
             <span className="text-lg md:text-xl lg:text-2xl">
-              Zero servers. Zero DevOps. Zero vendor lock-in.
+              Zero servers. Zero DevOps.
             </span>
           </p>
 
