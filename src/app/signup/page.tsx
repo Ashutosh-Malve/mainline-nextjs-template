@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+
+import type { Metadata } from "next";
 
 import { Background } from "@/components/background";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { siteConfig, getCanonicalUrl } from "@/lib/site-config";
+import { getCanonicalUrl } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Sign Up",

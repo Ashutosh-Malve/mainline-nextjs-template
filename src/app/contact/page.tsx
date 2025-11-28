@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { Background } from "@/components/background";
 import Contact from "@/components/blocks/contact";
-import { siteConfig, getCanonicalUrl } from "@/lib/site-config";
+import { getCanonicalUrl } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Contact",

@@ -5,7 +5,7 @@ import About from "@/components/blocks/about";
 import { AboutHero } from "@/components/blocks/about-hero";
 import { Investors } from "@/components/blocks/investors";
 import { DashedLine } from "@/components/dashed-line";
-import { siteConfig, getCanonicalUrl } from "@/lib/site-config";
+import { getCanonicalUrl } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "About",

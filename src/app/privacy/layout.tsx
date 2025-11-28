@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { siteConfig, getCanonicalUrl } from "@/lib/site-config";
+import { getCanonicalUrl } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",

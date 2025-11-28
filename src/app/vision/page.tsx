@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
 import { Background } from "@/components/background";
-import { VisionHero } from "@/components/blocks/vision-hero";
 import { VisionContent } from "@/components/blocks/vision-content";
+import { VisionHero } from "@/components/blocks/vision-hero";
 import { DashedLine } from "@/components/dashed-line";
-import { siteConfig, getCanonicalUrl } from "@/lib/site-config";
+import { getCanonicalUrl } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Vision",

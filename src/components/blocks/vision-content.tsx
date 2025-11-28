@@ -1,8 +1,8 @@
 import { Check } from "lucide-react";
 
 import { DashedLine } from "@/components/dashed-line";
-import { siteConfig } from "@/lib/site-config";
 import { Card, CardContent } from "@/components/ui/card";
+import { siteConfig } from "@/lib/site-config";
 
 export function VisionContent() {
   return (

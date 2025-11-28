@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Background } from "@/components/background";
 import { Pricing } from "@/components/blocks/pricing";
 import { PricingTable } from "@/components/blocks/pricing-table";
-import { siteConfig, getCanonicalUrl } from "@/lib/site-config";
+import { getCanonicalUrl } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Pricing",

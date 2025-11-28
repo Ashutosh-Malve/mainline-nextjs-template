@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 
 import { Background } from "@/components/background";
+import { AnimatedFeatures } from "@/components/blocks/animated-features";
+import { BenefitsSection } from "@/components/blocks/benefits-section";
+import { CodeExample } from "@/components/blocks/code-example";
 import { FAQ } from "@/components/blocks/faq";
-import { Features } from "@/components/blocks/features";
 import { Hero } from "@/components/blocks/hero";
 import { Pricing } from "@/components/blocks/pricing";
-import { ResourceAllocation } from "@/components/blocks/resource-allocation";
+import { ProductCapabilities } from "@/components/blocks/product-capabilities";
+import { StatsSection } from "@/components/blocks/stats-section";
 import { Testimonials } from "@/components/blocks/testimonials";
-import { Vision } from "@/components/blocks/vision";
+import { UseCases } from "@/components/blocks/use-cases";
 import { siteConfig, getCanonicalUrl } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -52,9 +55,12 @@ export default function Home() {
       />
       <Background className="via-muted to-muted/80">
         <Hero />
-        <Vision />
-        <Features />
-        <ResourceAllocation />
+        <StatsSection />
+        <AnimatedFeatures />
+        <BenefitsSection />
+        <ProductCapabilities />
+        <CodeExample />
+        <UseCases />
       </Background>
       <Testimonials />
       <Background variant="bottom">

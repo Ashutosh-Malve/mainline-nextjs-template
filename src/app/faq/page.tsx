@@ -4,7 +4,7 @@ import { Background } from "@/components/background";
 import { FAQ } from "@/components/blocks/faq";
 import { Testimonials } from "@/components/blocks/testimonials";
 import { DashedLine } from "@/components/dashed-line";
-import { siteConfig, getCanonicalUrl } from "@/lib/site-config";
+import { getCanonicalUrl } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "FAQ",

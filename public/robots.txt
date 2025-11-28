@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://edgebase.com/sitemap.xml
+Sitemap: https://edgebase.malve.co/sitemap.xml
 
 # Disallow admin/login pages
 Disallow: /login

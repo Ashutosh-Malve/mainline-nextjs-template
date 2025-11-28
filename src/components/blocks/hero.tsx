@@ -1,119 +1,95 @@
-import {
-  ArrowRight,
-  Database,
-  FolderOpen,
-  Key,
-  Zap,
-  Brain,
-  BarChart,
-} from "lucide-react";
+"use client";
 
-import { DashedLine } from "@/components/dashed-line";
+import { ArrowRight, Sparkles } from "lucide-react";
+import { motion } from "motion/react";
+
+import { AnimatedNetwork } from "./animated-network";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site-config";
 
-const features = [
-  {
-    title: "Auth",
-    description: "Email, OAuth, JWT out-of-the-box — no setup required.",
-    icon: Key,
-  },
-  {
-    title: "PostgreSQL",
-    description: "Global-ready SQL via Hyperdrive or native connection.",
-    icon: Database,
-  },
-  {
-    title: "File Storage",
-    description: "R2-backed object storage with zero egress costs.",
-    icon: FolderOpen,
-  },
-  {
-    title: "Functions",
-    description: "Global compute via Workers, zero cold starts, <60ms latency.",
-    icon: Zap,
-  },
-  {
-    title: "Memory",
-    description: "Per-user/session scoped durable memory via Durable Objects.",
-    icon: Brain,
-  },
-  {
-    title: "Observability",
-    description: "Tracing, cost, usage, and failure introspection built-in.",
-    icon: BarChart,
-  },
-];
-
 export const Hero = () => {
   return (
-    <section className="py-28 lg:py-32 lg:pt-44">
-      <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
-        {/* Left side - Main content */}
-        <div className="flex-1">
-          <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl">
-            EdgeBase — Future-Ready Fully Managed Backend Platform
-          </h1>
+    <section className="relative py-20 md:py-32 lg:py-40">
+      <div className="container">
+        {/* Badge */}
+        <motion.div
+          className="mb-8 flex justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Badge variant="beta" className="gap-2 px-4 py-1.5">
+            <Sparkles className="h-3.5 w-3.5" />
+            <span>Fully Managed Backend Platform</span>
+          </Badge>
+        </motion.div>
 
-          <p className="text-muted-foreground text-1xl mt-5 md:text-3xl"> 
-            <span className="text-lg md:text-xl lg:text-2xl">
-              Zero servers. Zero DevOps. Zero cold starts.
-            </span>
-          </p>
+        {/* Main Heading */}
+        <div className="mx-auto max-w-5xl text-center">
+          <motion.h1
+            className="mb-6 bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-4xl font-semibold tracking-tight text-transparent md:text-5xl lg:text-6xl xl:text-7xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            Build Backend Infrastructure
+            <br />
+            <span className="text-primary">Globally in Minutes</span>
+          </motion.h1>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
-            <div className="flex items-center gap-2">
-              <Button asChild>
-                <a href="/signup">
-                  Sign up to waitlist
-                </a>
-              </Button>
-              <Badge variant="comingSoon">Coming Soon</Badge>
-            </div>
-            <Button
-              variant="outline"
-              className="from-background h-auto gap-2 bg-linear-to-r to-transparent shadow-md"
-              asChild
-            >
-              <a
-                href={siteConfig.github.url}
-                className="max-w-56 truncate text-start md:max-w-none"
-              >
-                View on GitHub
-                <ArrowRight className="stroke-3" />
+          <motion.p
+            className="text-muted-foreground mx-auto mb-4 max-w-3xl text-lg leading-relaxed md:text-xl lg:text-2xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            EdgeBase gives you real-time database, authentication, storage, and serverless functions — all running on Cloudflare's global edge network. Zero servers. Zero DevOps. Zero cold starts.
+          </motion.p>
+
+          <motion.p
+            className="text-muted-foreground mx-auto mb-10 max-w-2xl text-sm md:text-base"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            Deploy to 200+ cities worldwide with a single API call. Start building production-ready backends in minutes, not months.
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div
+            className="mb-16 flex flex-wrap items-center justify-center gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <Button size="lg" className="text-base" asChild>
+              <a href="/signup">
+                Start building for free
+                <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
-          </div>
+            <Button size="lg" variant="outline" className="text-base" asChild>
+              <a href={siteConfig.github.url}>
+                View documentation
+              </a>
+            </Button>
+            <Badge variant="comingSoon" className="ml-2">
+              Coming Soon
+            </Badge>
+          </motion.div>
         </div>
 
-        {/* Right side - Features */}
-        <div className="relative flex flex-1 flex-col justify-center space-y-5 max-lg:pt-10 lg:pl-10">
-          <DashedLine
-            orientation="vertical"
-            className="absolute top-0 left-0 max-lg:hidden"
-          />
-          <DashedLine
-            orientation="horizontal"
-            className="absolute top-0 lg:hidden"
-          />
-          {features.map((feature) => {
-            const Icon = feature.icon;
-            return (
-              <div key={feature.title} className="flex gap-2.5 lg:gap-5">
-                <Icon className="text-foreground mt-1 size-4 shrink-0 lg:size-5" />
-                <div>
-                  <h2 className="font-text text-foreground font-semibold">
-                    {feature.title}
-                  </h2>
-                  <p className="text-muted-foreground max-w-76 text-sm">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        {/* Animated Network Diagram */}
+        <motion.div
+          className="mx-auto max-w-4xl"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+        >
+          <AnimatedNetwork />
+        </motion.div>
       </div>
     </section>
   );
