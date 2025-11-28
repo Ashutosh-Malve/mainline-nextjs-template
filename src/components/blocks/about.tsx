@@ -10,7 +10,7 @@ const About = () => {
         <TextSection
           title="The team"
           paragraphs={[
-            "EdgeBase is built from the ground up for the edge. Every component is designed to run on Cloudflare's global network — with zero cold starts, sub-200ms latency worldwide, and automatic scaling.",
+            "EdgeBase is built from the ground up for the edge. Every component is designed to run on edge infrastructure — with zero cold starts, sub-200ms latency worldwide, and automatic scaling.",
             "We're focused on giving developers the simplest path to building global backends. No servers to manage, no DevOps overhead, just deploy and scale.",
             "If you're interested in building the future of edge computing, check out our open roles below.",
           ]}
@@ -25,7 +25,7 @@ const About = () => {
       <div className="flex flex-col gap-8 lg:gap-16 xl:gap-20">
         <TextSection
           paragraphs={[
-            "At EdgeBase, we're building the backend platform that developers have been waiting for. Firebase gave us simplicity, Cloudflare gave us the edge — EdgeBase gives you both without the cost or lock-in.",
+            "At EdgeBase, we're building the backend platform that developers have been waiting for. EdgeBase gives you simplicity and edge performance without the cost or lock-in.",
             "We're committed to open, portable infrastructure. Your data stays yours, your code stays yours, and you can run it anywhere. When you succeed, we succeed.",
           ]}
         />

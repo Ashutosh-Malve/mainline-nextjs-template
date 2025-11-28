@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { FcGoogle } from "react-icons/fc";
@@ -7,6 +8,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
+import { siteConfig, getCanonicalUrl } from "@/lib/site-config";
+
+export const metadata: Metadata = {
+  title: "Login",
+  description: "Login to your EdgeBase account to manage your backend infrastructure.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+  alternates: {
+    canonical: getCanonicalUrl("/login"),
+  },
+};
 
 const Login = () => {
   return (

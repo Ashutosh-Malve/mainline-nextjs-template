@@ -11,6 +11,7 @@ import {
 import { DashedLine } from "@/components/dashed-line";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/lib/site-config";
 
 const features = [
   {
@@ -25,7 +26,7 @@ const features = [
   },
   {
     title: "File Storage",
-    description: "Cloudflare R2-backed object storage with zero egress costs.",
+    description: "R2-backed object storage with zero egress costs.",
     icon: FolderOpen,
   },
   {
@@ -51,7 +52,8 @@ export const Hero = () => {
       <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         {/* Left side - Main content */}
         <div className="flex-1">
-          <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl"> EdgeBase — Future-Ready Fully Managed Backend Platform
+          <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl">
+            EdgeBase — Future-Ready Fully Managed Backend Platform
           </h1>
 
           <p className="text-muted-foreground text-1xl mt-5 md:text-3xl"> 
@@ -75,7 +77,7 @@ export const Hero = () => {
               asChild
             >
               <a
-                href="https://github.com"
+                href={siteConfig.github.url}
                 className="max-w-56 truncate text-start md:max-w-none"
               >
                 View on GitHub

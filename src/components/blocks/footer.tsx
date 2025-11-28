@@ -1,11 +1,12 @@
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/lib/site-config";
 
 export function Footer() {
   const navigation = [
-    { name: "GitHub", href: "https://github.com" },
-    { name: "X (Twitter)", href: "https://x.com/malve" },
+    { name: "GitHub", href: siteConfig.github.url },
+    { name: "X (Twitter)", href: siteConfig.twitter.url },
   ];
 
   const legal = [
@@ -17,10 +18,10 @@ export function Footer() {
     <footer className="flex flex-col items-center gap-14 pt-28 lg:pt-32">
       <div className="container space-y-3 text-center">
         <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-          EdgeBase — Fully managed backend on the edge
+          {siteConfig.name} — Fully managed backend on the edge
         </h2>
         <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
-          Build fast. Scale globally. Pay less.
+          {siteConfig.tagline}
         </p>
         <div>
           <Button size="lg" className="mt-4" asChild>

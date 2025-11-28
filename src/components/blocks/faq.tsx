@@ -13,14 +13,14 @@ const categories = [
     title: "About EdgeBase",
     questions: [
       {
-        question: "Is EdgeBase just Firebase on Cloudflare?",
+        question: "What makes EdgeBase different?",
         answer:
-          "No — it's a full backend platform built natively for the edge. You own the data, we manage the runtime.",
+          "EdgeBase is a full backend platform built natively for the edge. You own the data, we manage the runtime. No servers, no DevOps overhead.",
       },
       {
         question: "Do I need to manage servers?",
         answer:
-          "Nope. It's 100% serverless — we deploy your data, logic, and storage across Cloudflare's global edge network.",
+          "No. It's 100% serverless — we deploy your data, logic, and storage across edge infrastructure globally.",
       },
       {
         question: "Can I self-host?",

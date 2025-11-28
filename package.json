@@ -10,7 +10,10 @@
     "deploy": "npm run build && wrangler deploy",
     "start": "next start",
     "lint": "next lint --fix",
-    "format": "prettier -w ."
+    "format": "prettier -w .",
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "generate:robots": "node scripts/generate-robots.js",
+    "generate:seo": "npm run generate:sitemap && npm run generate:robots"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

@@ -27,7 +27,7 @@ const items = [
     company: "In Minutes",
   },
   {
-    quote: "Building the platform we wish existed: Firebase's simplicity meets Cloudflare's edge network.",
+    quote: "Building the platform we wish existed: simplicity meets edge performance.",
     author: "Why We're Building",
     role: "The Best of",
     company: "Both Worlds",
@@ -51,7 +51,7 @@ const items = [
     company: "In Minutes",
   },
   {
-    quote: "Building the platform we wish existed: Firebase's simplicity meets Cloudflare's edge network.",
+    quote: "Building the platform we wish existed: simplicity meets edge performance.",
     author: "Why We're Building",
     role: "The Best of",
     company: "Both Worlds",
@@ -81,7 +81,7 @@ export const Testimonials = ({
             </h2>
             <p className="text-muted-foreground max-w-md leading-snug">
               EdgeBase is designed for teams who want to build fast, scale globally, and own their infrastructure. 
-              Whether you're an indie builder shipping your first product or a team scaling beyond Firebase, 
+              Whether you're an indie builder shipping your first product or a team building scalable backends, 
               we're building the platform you need.
             </p>
             <Button variant="outline" className="shadow-md" asChild>

@@ -33,7 +33,7 @@ export function AboutHero() {
           </p>
 
           <p className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-lg text-balance md:block lg:mt-12">
-            At EdgeBase, we are dedicated to transforming how developers build backends. Our mission is to provide developers with a fully managed backend platform that runs on Cloudflare's edge network — giving you Firebase-like simplicity with global edge performance.
+            At EdgeBase, we are dedicated to transforming how developers build backends. Our mission is to provide developers with a fully managed backend platform that runs on edge infrastructure — giving you simplicity with global edge performance.
             <br />
             <br />
             We're developer-focused — building the tools that let you focus on product logic, not infrastructure. Your data, your logic, your scale — all running on the fastest edge network in the world.

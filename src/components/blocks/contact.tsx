@@ -4,6 +4,8 @@ import Link from "next/link";
 
 import { Twitter } from "lucide-react";
 
+import { siteConfig } from "@/lib/site-config";
+
 export default function Contact() {
   return (
     <section className="py-28 lg:py-32 lg:pt-44">
@@ -16,13 +18,13 @@ export default function Contact() {
             Reach out on X
           </p>
           <Link
-            href="https://x.com/malve"
+            href={siteConfig.twitter.url}
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:text-primary/80 flex items-center gap-2 text-xl font-semibold transition-colors"
           >
             <Twitter className="size-6" />
-            @malve
+            {siteConfig.twitter.handle}
           </Link>
         </div>
       </div>

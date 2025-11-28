@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Background } from "@/components/background";
@@ -5,6 +6,20 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { siteConfig, getCanonicalUrl } from "@/lib/site-config";
+
+export const metadata: Metadata = {
+  title: "Sign Up",
+  description:
+    "Join the EdgeBase waitlist. Be the first to know when our fully managed backend platform is ready for early access. Zero servers. Zero DevOps. Zero cold starts.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+  alternates: {
+    canonical: getCanonicalUrl("/signup"),
+  },
+};
 
 const Signup = () => {
   return (

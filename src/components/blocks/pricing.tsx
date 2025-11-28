@@ -65,7 +65,7 @@ export const Pricing = ({ className }: { className?: string }) => {
             <Card
               key={plan.name}
               className={`${
-                plan.name === "Startup"
+                plan.name === "Pro"
                   ? "outline-primary origin-top outline-4"
                   : ""
               }`}

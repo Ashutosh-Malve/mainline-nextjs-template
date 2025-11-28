@@ -6,9 +6,9 @@ import { cn } from "@/lib/utils";
 
 const topItems = [
   {
-    title: "Firebase gave us simplicity.",
+    title: "Simplicity meets edge performance.",
     description:
-      "Cloudflare gave us the edge. EdgeBase gives you both — without the cost or lock-in.",
+      "EdgeBase gives you both — without the cost or lock-in.",
     images: [],
     className:
       "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8",
@@ -16,7 +16,7 @@ const topItems = [
   },
   {
     title: "Built for:",
-    description: "Indie builders and SaaS founders, teams scaling beyond Firebase, AI + realtime apps needing low-latency sync.",
+    description: "Indie builders and SaaS founders, teams building scalable backends, AI + realtime apps needing low-latency sync.",
     images: [
       { src: "/logos/jira.svg", alt: "Builder logo", width: 48, height: 48 },
       { src: "/logos/excel.svg", alt: "SaaS logo", width: 48, height: 48 },
@@ -64,7 +64,7 @@ const bottomItems = [
     fade: [],
   },
   {
-    title: "Teams scaling beyond Firebase.",
+    title: "Teams building scalable backends.",
     description:
       "Own your data, your logic, your scale.",
     images: [],

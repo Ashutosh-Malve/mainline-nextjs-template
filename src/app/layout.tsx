@@ -7,6 +7,7 @@ import { Footer } from "@/components/blocks/footer";
 import { Navbar } from "@/components/blocks/navbar";
 import { StyleGlideProvider } from "@/components/styleglide-provider";
 import { ThemeProvider } from "@/components/theme-provider";
+import { siteConfig, getCanonicalUrl } from "@/lib/site-config";
 import "@/styles/globals.css";
 
 const dmSans = localFont({
@@ -62,32 +63,51 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.baseUrl),
   title: {
-    default: "EdgeBase - Fully managed backend on the edge",
-    template: "%s | EdgeBase",
+    default: siteConfig.defaultTitle,
+    template: siteConfig.titleTemplate,
   },
-  description:
-    "Firebase for the Edge — Fully Managed Backend on Cloudflare. Real-time data, auth, storage, and functions — built entirely on Cloudflare's edge network. Zero servers. Zero DevOps.",
+  description: siteConfig.description,
   keywords: [
     "EdgeBase",
     "edge computing",
-    "Cloudflare",
     "backend as a service",
-    "Firebase alternative",
+    "BaaS",
     "edge functions",
-    "serverless",
+    "serverless backend",
     "real-time database",
     "edge auth",
     "edge storage",
-    "BaaS",
     "edge backend",
+    "managed backend",
+    "serverless platform",
+    "edge infrastructure",
+    "global edge network",
+    "zero cold starts",
+    "edge-native backend",
   ],
-  authors: [{ name: "EdgeBase" }],
-  creator: "EdgeBase",
-  publisher: "EdgeBase",
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: getCanonicalUrl(),
   },
   icons: {
     icon: [
@@ -101,26 +121,29 @@ export const metadata: Metadata = {
     shortcut: [{ url: "/favicon/favicon.ico" }],
   },
   openGraph: {
-    title: "EdgeBase - Fully managed backend on the edge",
-    description:
-      "Firebase for the Edge — Fully Managed Backend on Cloudflare. Real-time data, auth, storage, and functions — built entirely on Cloudflare's edge network.",
-    siteName: "EdgeBase",
+    type: "website",
+    locale: siteConfig.locale,
+    url: siteConfig.url,
+    title: siteConfig.defaultTitle,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
     images: [
       {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "EdgeBase - Fully managed backend on the edge",
+        url: siteConfig.ogImage,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
+        alt: siteConfig.defaultTitle,
+        type: "image/jpeg",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "EdgeBase - Fully managed backend on the edge",
-    description:
-      "Firebase for the Edge — Fully Managed Backend on Cloudflare. Build fast. Scale globally. Pay less.",
-    images: ["/og-image.jpg"],
-    creator: "@edgebase",
+    title: siteConfig.defaultTitle,
+    description: siteConfig.tagline,
+    images: [siteConfig.ogImage],
+    creator: siteConfig.twitter.handle,
+    site: siteConfig.twitter.handle,
   },
 };
 

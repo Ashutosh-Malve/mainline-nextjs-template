@@ -9,7 +9,7 @@ export const Vision = () => {
       <div className="container space-y-10 lg:space-y-16">
         <div className="text-center">
           <h2 className="mb-4 text-xl text-balance md:text-2xl lg:text-3xl">
-            Why Edgebase Exists
+            Why EdgeBase Exists
           </h2>
           <p className="text-muted-foreground mx-auto max-w-3xl text-balance leading-relaxed">
             Frontend engineers want to build production-grade apps—fast—without dealing with fragmented backend infrastructure, 
@@ -28,10 +28,10 @@ export const Vision = () => {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-3">
             <h3 className="text-foreground text-lg font-semibold">
-              Cloudflare-Native
+              Edge-Native
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Speed, reliability, no cold starts. Built entirely on Cloudflare's edge network for global performance and massive cost savings.
+              Speed, reliability, no cold starts. Built entirely on edge infrastructure for global performance and massive cost savings.
             </p>
           </div>
           
@@ -49,7 +49,7 @@ export const Vision = () => {
               Optional AI Stack
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Memory, tools, gateway, observability. Built-in support for AI-enhanced products without requiring LangChain or custom code.
+              Memory, tools, gateway, observability. Built-in support for AI-enhanced products without requiring additional frameworks or custom code.
             </p>
           </div>
           

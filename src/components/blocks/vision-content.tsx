@@ -1,18 +1,19 @@
 import { Check } from "lucide-react";
 
 import { DashedLine } from "@/components/dashed-line";
+import { siteConfig } from "@/lib/site-config";
 import { Card, CardContent } from "@/components/ui/card";
 
 export function VisionContent() {
   return (
-    <div className="space-y-28 lg:space-y-32">
-      {/* Why Edgebase Exists */}
+    <div className="space-y-20 lg:space-y-24">
+      {/* Why EdgeBase Exists */}
       <section>
         <div className="container max-w-5xl">
-          <h2 className="mb-6 text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            Why Edgebase Exists
+          <h2 className="mb-8 text-2xl tracking-tight md:text-4xl lg:text-5xl">
+            Why EdgeBase Exists
           </h2>
-          <div className="space-y-6">
+          <div className="space-y-8">
             <div>
               <h3 className="mb-3 text-xl font-semibold">Core Insight</h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -22,12 +23,12 @@ export function VisionContent() {
               </p>
             </div>
 
-            <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <div className="mt-10 grid gap-6 md:grid-cols-2">
               <Card>
                 <CardContent className="p-6">
                   <h4 className="mb-2 font-semibold">Too Many Services</h4>
                   <p className="text-muted-foreground text-sm">
-                    Supabase, Vercel, Prisma, OpenAI, Redis, Pinecone, stitched manually — high cognitive load, messy integration.
+                    Multiple services stitched manually — high cognitive load, messy integration, and complex setup.
                   </p>
                 </CardContent>
               </Card>
@@ -63,14 +64,14 @@ export function VisionContent() {
       {/* Core Platform Features */}
       <section>
         <div className="container max-w-5xl">
-          <div className="relative flex items-center justify-center mb-10">
+          <div className="relative flex items-center justify-center mb-12">
             <DashedLine className="text-muted-foreground" />
             <span className="bg-muted text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
               CORE PLATFORM FEATURES
             </span>
           </div>
 
-          <h2 className="mb-8 text-2xl tracking-tight md:text-4xl lg:text-5xl">
+          <h2 className="mb-10 text-2xl tracking-tight md:text-4xl lg:text-5xl">
             The Platform
           </h2>
 
@@ -95,7 +96,7 @@ export function VisionContent() {
               <CardContent className="p-6">
                 <h3 className="mb-2 text-lg font-semibold">File Storage</h3>
                 <p className="text-muted-foreground text-sm">
-                  Cloudflare R2-backed object storage
+                  R2-backed object storage with zero egress costs
                 </p>
               </CardContent>
             </Card>
@@ -146,14 +147,14 @@ export function VisionContent() {
       {/* Developer Experience */}
       <section>
         <div className="container max-w-5xl">
-          <h2 className="mb-6 text-2xl tracking-tight md:text-4xl lg:text-5xl">
+          <h2 className="mb-8 text-2xl tracking-tight md:text-4xl lg:text-5xl">
             Developer Experience
           </h2>
-          <p className="text-muted-foreground mb-8 max-w-3xl leading-relaxed">
+          <p className="text-muted-foreground mb-10 max-w-3xl leading-relaxed">
             Designed for modern product engineers, not backend specialists.
           </p>
 
-          <div className="space-y-6">
+          <div className="space-y-8">
             <Card>
               <CardContent className="p-6">
                 <h3 className="mb-3 text-lg font-semibold">Interfaces</h3>
@@ -161,13 +162,13 @@ export function VisionContent() {
                   <li className="flex items-start gap-2">
                     <Check className="mt-0.5 size-5 shrink-0" />
                     <span className="text-muted-foreground text-sm">
-                      <strong>JS/TS SDK</strong> (@edgebase/client) – Works in browser, Node.js, and edge
+                      <strong>JS/TS SDK</strong> ({siteConfig.packageName}) – Works in browser, Node.js, and edge
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="mt-0.5 size-5 shrink-0" />
                     <span className="text-muted-foreground text-sm">
-                      <strong>CLI</strong> – edgebase init, edgebase dev, edgebase deploy, edgebase trace
+                      <strong>CLI</strong> – {siteConfig.cliName} init, {siteConfig.cliName} dev, {siteConfig.cliName} deploy, {siteConfig.cliName} trace
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
@@ -179,7 +180,7 @@ export function VisionContent() {
                   <li className="flex items-start gap-2">
                     <Check className="mt-0.5 size-5 shrink-0" />
                     <span className="text-muted-foreground text-sm">
-                      <strong>Config-as-Code</strong> – YAML or edgebase.config.ts
+                      <strong>Config-as-Code</strong> – YAML or {siteConfig.configFileName}
                     </span>
                   </li>
                 </ul>
@@ -224,14 +225,14 @@ export function VisionContent() {
       {/* Architecture Overview */}
       <section>
         <div className="container max-w-5xl">
-          <div className="relative flex items-center justify-center mb-10">
+          <div className="relative flex items-center justify-center mb-12">
             <DashedLine className="text-muted-foreground" />
             <span className="bg-muted text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
               ARCHITECTURE
             </span>
           </div>
 
-          <h2 className="mb-8 text-2xl tracking-tight md:text-4xl lg:text-5xl">
+          <h2 className="mb-10 text-2xl tracking-tight md:text-4xl lg:text-5xl">
             Architecture Overview
           </h2>
 
@@ -279,16 +280,16 @@ export function VisionContent() {
       {/* Use Cases */}
       <section>
         <div className="container max-w-5xl">
-          <h2 className="mb-8 text-2xl tracking-tight md:text-4xl lg:text-5xl">
+          <h2 className="mb-10 text-2xl tracking-tight md:text-4xl lg:text-5xl">
             Use Cases
           </h2>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-3">
             <Card>
               <CardContent className="p-6">
                 <h3 className="mb-3 text-lg font-semibold">1. Fullstack SaaS Backend</h3>
                 <p className="text-muted-foreground text-sm">
-                  Auth, DB, storage, file handling, user sessions. No AWS or GCP setup, deploy from CLI.
+                  Auth, DB, storage, file handling, user sessions. No cloud provider setup required, deploy from CLI.
                 </p>
               </CardContent>
             </Card>
@@ -304,7 +305,7 @@ export function VisionContent() {
               <CardContent className="p-6">
                 <h3 className="mb-3 text-lg font-semibold">3. AI-Enhanced Products</h3>
                 <p className="text-muted-foreground text-sm">
-                  Tools, memory, observability + gateway support. Declarative config, no LangChain required.
+                  Tools, memory, observability + gateway support. Declarative config, no additional frameworks required.
                 </p>
               </CardContent>
             </Card>
@@ -315,10 +316,10 @@ export function VisionContent() {
       {/* What We're Not */}
       <section>
         <div className="container max-w-5xl">
-          <h2 className="mb-6 text-2xl tracking-tight md:text-4xl lg:text-5xl">
+          <h2 className="mb-8 text-2xl tracking-tight md:text-4xl lg:text-5xl">
             What We're Not
           </h2>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2">
             <div className="space-y-2">
               <p className="text-muted-foreground">
                 <strong className="text-foreground">Not ML-ops tooling</strong> — We're focused on backend infrastructure, not ML model training or deployment pipelines.
@@ -349,18 +350,18 @@ export function VisionContent() {
       {/* Strategic Positioning */}
       <section>
         <div className="container max-w-5xl">
-          <div className="relative flex items-center justify-center mb-10">
+          <div className="relative flex items-center justify-center mb-12">
             <DashedLine className="text-muted-foreground" />
             <span className="bg-muted text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
               STRATEGIC POSITIONING
             </span>
           </div>
 
-          <h2 className="mb-6 text-2xl tracking-tight md:text-4xl lg:text-5xl">
+          <h2 className="mb-8 text-2xl tracking-tight md:text-4xl lg:text-5xl">
             Strategic Positioning
           </h2>
-          <p className="text-muted-foreground mb-8 max-w-3xl leading-relaxed">
-            Edgebase is a fully managed backend for modern apps — fast to build, scalable by design, 
+          <p className="text-muted-foreground mb-10 max-w-3xl leading-relaxed">
+            EdgeBase is a fully managed backend for modern apps — fast to build, scalable by design, 
             and built on edge-native primitives. It replaces 5+ tools and lets you ship faster, debug easier, 
             and scale cheaper.
           </p>
@@ -368,7 +369,7 @@ export function VisionContent() {
           <div className="grid gap-4 md:grid-cols-2">
             <Card>
               <CardContent className="p-6">
-                <h3 className="mb-2 text-lg font-semibold">Cloudflare-native</h3>
+                <h3 className="mb-2 text-lg font-semibold">Edge-native</h3>
                 <p className="text-muted-foreground text-sm">
                   Speed, reliability, no cold starts
                 </p>
@@ -405,13 +406,13 @@ export function VisionContent() {
       {/* Roadmap Concepts */}
       <section>
         <div className="container max-w-5xl">
-          <h2 className="mb-8 text-2xl tracking-tight md:text-4xl lg:text-5xl">
+          <h2 className="mb-10 text-2xl tracking-tight md:text-4xl lg:text-5xl">
             Roadmap Concepts
           </h2>
 
-          <div className="space-y-8">
+          <div className="space-y-10">
             <div>
-              <h3 className="mb-4 text-xl font-semibold">Immediate</h3>
+              <h3 className="mb-6 text-xl font-semibold">Immediate</h3>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <Check className="mt-0.5 size-5 shrink-0" />
@@ -433,7 +434,7 @@ export function VisionContent() {
             </div>
 
             <div>
-              <h3 className="mb-4 text-xl font-semibold">Mid-Term</h3>
+              <h3 className="mb-6 text-xl font-semibold">Mid-Term</h3>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <Check className="mt-0.5 size-5 shrink-0" />
@@ -449,13 +450,13 @@ export function VisionContent() {
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="mt-0.5 size-5 shrink-0" />
-                  <span className="text-muted-foreground text-sm">Gateway support for OpenAI, Claude, OSS</span>
+                  <span className="text-muted-foreground text-sm">Gateway support for multiple AI models and OSS</span>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h3 className="mb-4 text-xl font-semibold">Long-Term</h3>
+              <h3 className="mb-6 text-xl font-semibold">Long-Term</h3>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <Check className="mt-0.5 size-5 shrink-0" />
