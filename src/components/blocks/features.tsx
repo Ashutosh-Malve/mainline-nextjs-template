@@ -9,15 +9,18 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const items = [
   {
-    title: "⚡ Edge Performance",
+    title: "Auth & Storage",
+    description: "Email, OAuth, JWT out-of-the-box. R2-backed file storage with zero egress costs.",
     image: "/features/triage-card.svg",
   },
   {
-    title: "🧠 Fully Managed",
+    title: "PostgreSQL & Functions",
+    description: "Global-ready SQL via Hyperdrive. Zero cold start functions via Workers.",
     image: "/features/cycle-card.svg",
   },
   {
-    title: "📦 Real-Time Data",
+    title: "Memory & Observability",
+    description: "Per-user/session durable memory. Built-in tracing, cost, and usage introspection.",
     image: "/features/overview-card.svg",
   },
 ];
@@ -40,7 +43,8 @@ export const Features = () => {
             Features
           </h2>
           <p className="text-muted-foreground leading-snug">
-            Real-time data, auth, storage, and functions — built entirely on Cloudflare's edge network for global performance.
+            Auth, PostgreSQL, file storage, functions, memory, knowledge store, tool binding, and observability — 
+            all unified in one managed backend platform built for the edge.
           </p>
         </div>
 
@@ -60,19 +64,16 @@ export const Features = () => {
                     <div className="from-background absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent" />
                   </div>
 
-                  <Link
-                    href="#"
-                    className={
-                      "group flex items-center justify-between gap-4 pe-4 pt-4 md:pe-6 md:pt-6"
-                    }
-                  >
+                  <div className="pe-4 pt-4 md:pe-6 md:pt-6">
                     <h3 className="font-display max-w-60 text-2xl leading-tight font-bold tracking-tight">
                       {item.title}
                     </h3>
-                    <div className="rounded-full border p-2">
-                      <ChevronRight className="size-6 transition-transform group-hover:translate-x-1 lg:size-9" />
-                    </div>
-                  </Link>
+                    {item.description && (
+                      <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
+                        {item.description}
+                      </p>
+                    )}
+                  </div>
                 </div>
                 {i < items.length - 1 && (
                   <div className="relative hidden md:block">

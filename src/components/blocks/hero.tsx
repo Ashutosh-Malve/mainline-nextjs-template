@@ -1,9 +1,11 @@
 import {
   ArrowRight,
-  Blend,
-  ChartNoAxesColumn,
-  CircleDot,
-  Diamond,
+  Database,
+  FolderOpen,
+  Key,
+  Zap,
+  Brain,
+  BarChart,
 } from "lucide-react";
 
 import { DashedLine } from "@/components/dashed-line";
@@ -12,24 +14,34 @@ import { Button } from "@/components/ui/button";
 
 const features = [
   {
-    title: "Edge Performance",
-    description: "Sub-200ms latency worldwide with automatic scaling and zero cold starts.",
-    icon: CircleDot,
+    title: "Auth",
+    description: "Email, OAuth, JWT out-of-the-box — no setup required.",
+    icon: Key,
   },
   {
-    title: "Fully Managed",
-    description: "We handle provisioning, scaling, caching, and replication automatically.",
-    icon: Blend,
+    title: "PostgreSQL",
+    description: "Global-ready SQL via Hyperdrive or native connection.",
+    icon: Database,
   },
   {
-    title: "Real-Time Data",
-    description: "Instant sync for users across continents with Firestore-style API.",
-    icon: Diamond,
+    title: "File Storage",
+    description: "Cloudflare R2-backed object storage with zero egress costs.",
+    icon: FolderOpen,
   },
   {
-    title: "Zero Egress Cost",
-    description: "Upload, serve, and stream globally with zero egress fees.",
-    icon: ChartNoAxesColumn,
+    title: "Functions",
+    description: "Global compute via Workers, zero cold starts, <60ms latency.",
+    icon: Zap,
+  },
+  {
+    title: "Memory",
+    description: "Per-user/session scoped durable memory via Durable Objects.",
+    icon: Brain,
+  },
+  {
+    title: "Observability",
+    description: "Tracing, cost, usage, and failure introspection built-in.",
+    icon: BarChart,
   },
 ];
 
@@ -39,16 +51,12 @@ export const Hero = () => {
       <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         {/* Left side - Main content */}
         <div className="flex-1">
-          <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl">
-            EdgeBase —<br className="hidden lg:block" />
-            Fully Managed Backend
+          <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl"> EdgeBase — Future-Ready Fully Managed Backend Platform
           </h1>
 
-          <p className="text-muted-foreground text-1xl mt-5 md:text-3xl">
-            Real-time data, auth, storage, and functions — built entirely on Cloudflare's edge network.
-            <br />
+          <p className="text-muted-foreground text-1xl mt-5 md:text-3xl"> 
             <span className="text-lg md:text-xl lg:text-2xl">
-              Zero servers. Zero DevOps.
+              Zero servers. Zero DevOps. Zero cold starts.
             </span>
           </p>
 
@@ -56,7 +64,7 @@ export const Hero = () => {
             <div className="flex items-center gap-2">
               <Button asChild>
                 <a href="/signup">
-                  🚀 Sign up to waitlist
+                  Sign up to waitlist
                 </a>
               </Button>
               <Badge variant="comingSoon">Coming Soon</Badge>
@@ -70,7 +78,7 @@ export const Hero = () => {
                 href="https://github.com"
                 className="max-w-56 truncate text-start md:max-w-none"
               >
-                💻 View on GitHub
+                View on GitHub
                 <ArrowRight className="stroke-3" />
               </a>
             </Button>

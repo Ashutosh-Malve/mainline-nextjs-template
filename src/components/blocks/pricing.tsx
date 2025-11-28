@@ -117,7 +117,7 @@ export const Pricing = ({ className }: { className?: string }) => {
                   className="w-fit"
                   variant={plan.name === "Pro" ? "default" : "outline"}
                 >
-                  {plan.name === "Free" ? "Sign up to waitlist →" : plan.name === "Scale" ? "Contact Sales" : "Sign up to waitlist"}
+                  {plan.name === "Free" ? "Sign up to waitlist" : plan.name === "Scale" ? "Contact Sales" : "Sign up to waitlist"}
                 </Button>
               </CardContent>
             </Card>

@@ -25,7 +25,7 @@ export function Footer() {
         <div>
           <Button size="lg" className="mt-4" asChild>
             <a href="/signup">
-              Sign up to waitlist →
+              Sign up to waitlist
             </a>
           </Button>
         </div>

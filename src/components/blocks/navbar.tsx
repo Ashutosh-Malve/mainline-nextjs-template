@@ -17,7 +17,7 @@ import {
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
-  { label: "Features", href: "#features" },
+  { label: "Vision", href: "/vision" },
   { label: "Pricing", href: "/pricing" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
